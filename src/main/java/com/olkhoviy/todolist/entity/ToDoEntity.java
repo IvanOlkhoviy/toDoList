@@ -19,5 +19,6 @@ import javax.persistence.Table;
 public class ToDoEntity extends BaseEntity {
 
     @Column(name = "toDoText", nullable = false, length = 500)
-    private String text;
+    private String title;
+    private boolean isCompleted;
 }

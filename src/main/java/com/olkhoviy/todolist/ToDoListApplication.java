@@ -22,27 +22,27 @@ public class ToDoListApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         if (toDoRepository.count()==0){
             ToDoEntity toDoEntity1 = new ToDoEntity();
-            toDoEntity1.setText("Make a new video game");
+            toDoEntity1.setTitle("Make a new video game");
             toDoRepository.save(toDoEntity1);
 
             ToDoEntity toDoEntity2 = new ToDoEntity();
-            toDoEntity2.setText("Feed dog");
+            toDoEntity2.setTitle("Feed dog");
             toDoRepository.save(toDoEntity2);
 
             ToDoEntity toDoEntity3 = new ToDoEntity();
-            toDoEntity3.setText("Draw Mona Lisa");
+            toDoEntity3.setTitle("Draw Mona Lisa");
             toDoRepository.save(toDoEntity3);
 
             ToDoEntity toDoEntity4 = new ToDoEntity();
-            toDoEntity4.setText("Make a lot of money");
+            toDoEntity4.setTitle("Make a lot of money");
             toDoRepository.save(toDoEntity4);
 
             ToDoEntity toDoEntity5 = new ToDoEntity();
-            toDoEntity5.setText("Do some exercises");
+            toDoEntity5.setTitle("Do some exercises");
             toDoRepository.save(toDoEntity5);
 
             ToDoEntity toDoEntity6 = new ToDoEntity();
-            toDoEntity6.setText("Drink milk");
+            toDoEntity6.setTitle("Drink milk");
             toDoRepository.save(toDoEntity6);
         }
 
