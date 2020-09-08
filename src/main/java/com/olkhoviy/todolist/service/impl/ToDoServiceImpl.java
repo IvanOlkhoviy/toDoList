@@ -10,6 +10,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ToDoServiceImpl implements ToDoService {
 
@@ -33,5 +35,13 @@ public class ToDoServiceImpl implements ToDoService {
     @Override
     public Page<ToDoEntity> getAllToDo(Pageable pageable) {
         return toDoRepository.findAll(pageable);
+    }
+
+    @Override
+    public void changeCompleteStatus(Long id) {
+         ToDoEntity toDoEntity = toDoRepository.getOne(id);
+         toDoEntity.setCompleted(!toDoEntity.isCompleted());
+         toDoRepository.save(toDoEntity);
+
     }
 }
