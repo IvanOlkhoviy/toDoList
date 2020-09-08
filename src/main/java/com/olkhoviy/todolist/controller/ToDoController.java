@@ -33,6 +33,12 @@ public class ToDoController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @PostMapping("{toDoId}")
+    public ResponseEntity<?> changeCompleteStatus(@PathVariable("toDoId") Long id){
+        toDoService.changeCompleteStatus(id);
+        return new ResponseEntity<>( HttpStatus.OK);
+    }
+
 
 
 

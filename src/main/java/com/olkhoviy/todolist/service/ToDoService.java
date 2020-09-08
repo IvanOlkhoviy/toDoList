@@ -15,4 +15,6 @@ public interface ToDoService {
 
     Page<ToDoEntity> getAllToDo(Pageable pageable);
 
+    void changeCompleteStatus(Long id);
+
 }
