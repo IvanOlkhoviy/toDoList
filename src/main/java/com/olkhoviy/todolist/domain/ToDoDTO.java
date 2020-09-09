@@ -11,6 +11,8 @@ public class ToDoDTO {
 
     private Long id;
 
-    private String text;
+    private String title;
+
+    private boolean isCompleted;
 
 }
